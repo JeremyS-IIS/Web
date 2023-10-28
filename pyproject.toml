@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "web"
+version = "0.1.0"
+description = ""
+authors = ["Jeremy"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^4.2.6"
+djangorestframework = "^3.14.0"
+ruff = "^0.1.1"
+drf-nested-routers = "^0.93.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+fix = true
+select = ["ALL"]
+ignore = ["ANN101", "ANN102", "D100", "RUF012", "D203", "D213"]
+line-length = 120
+target-version = "py311"
+extend-exclude = ["**/migrations/**"]
